@@ -1,13 +1,7 @@
-const ButtonDelete = ( props )=>{
-
-   const handleDelete = ()=>{
-      console.log('deleted', props.id)
-   }
-
-
+const ButtonDelete = ({ id, onButtonDelete })=>{
    return (
       <div className="flex flex-row-reverse justify-self-end">
-         <button onClick={ handleDelete } className="px-2 bg-red-800 rounded-full">x</button>
+         <button onClick={ ()=>onButtonDelete(id) } className="px-2 bg-red-800 rounded-full">x</button>
       </div>
    )
 }
